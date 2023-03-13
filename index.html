@@ -5,69 +5,81 @@
             calculator
         </title>
     </head>
-    <style>
-    /* body{
-   background-image: url();
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    background-size: 100% 100%;    
-   }  */
-</style>
-    <link href="calculator.css" rel="stylesheet">  
-     <body>
+   
+    <link href="calculator.css" rel="stylesheet"> 
     
-        <div class="tablet">
-           &nbsp; <img src="https://cdn-icons-png.flaticon.com/128/7795/7795282.png"height="50">
+    
+<script>
 
-           
+    function handelClick(val)
+    {
+        const inputBox = document.getElementById("inputnumber");
+        inputBox.value = (inputBox.value + val);
+    }
+    function clearScreen()
+    {
+        const inputBox= document.getElementById("inputnumber");
+        inputBox.value="";
+    }
+    function calculate()
+    {
+        const inputBox=document.getElementById("inputnumber");
+        const ans = eval(inputBox.value);
+        inputBox.value = ans;
+    }
+</script>
+
+     <body>
+
+        <div class="tablet">
+           &nbsp; <img style="margin-left: 30px; padding-top: 10px;" src="https://cdn-icons-png.flaticon.com/128/7795/7795282.png"height="50">
+
             <br><br><br><br><br><br>
-            <div>
-                
-                <button class="Button">e</button>
-                <button class="Button">tan</button>
-                <button class="Button">sin</button>
-                <button class="Button">cos</button>
-            </div>    
-            <div>
+            
+           <input type="text" class="calculator-screen" id="inputnumber">
+           <br><br>
+            <div  class="button-container">
+               
                 &nbsp;  &nbsp; 
-                <button class="Button2">C</button>
-                <button class="Button2">(</button>
-                <button class="Button2">)</button>
-              <button class="Button2">/+-</button>
+                <button class="Button2" onclick="clearScreen()" > C  </button>
+                <button class="Button2" onclick="handelClick('/')">/</button>
+                <button class="Button2" onclick="handelClick('-')">-</button>
+              <button class="Button2"  onclick="handelClick('+')">+</button>
             </div>    
             
-            <div>
-                <button class="Button">7</button>
-                <button class="Button">8</button>
-                <button class="Button">9</button>
-                <button class="Button2">*</button>
+            <div  class="button-container">
+                <button class="Button" onclick="handelClick(7)">7</button>
+                <button class="Button"  onclick="handelClick(8)">8</button>
+                <button class="Button"  onclick="handelClick(9)">9</button>
+                <button class="Button2"  onclick="handelClick('*')">*</button>
             </div> 
             
-            <div>
+            <div class="button-container">
                 
-                <button class="Button">4</button>
-                <button class="Button">5</button>
-                <button class="Button">6</button>
-                <button class="Button2">-</button>
+                <button class="Button"  onclick="handelClick(4)">4</button>
+                <button class="Button" onclick="handelClick(5)">5</button>
+                <button class="Button"  onclick="handelClick(6)">6</button>
+                <button class="Button2"  onclick="handelClick('%')">%</button>
             </div> 
-            <div>
+            <div class="button-container">
                 
-                <button class="Button">1</button>
-                <button class="Button">2</button>
-                <button class="Button">3</button>
-                <button class="Button2">+</button>
+                <button class="Button"  onclick="handelClick(1)">1</button>
+                <button class="Button"  onclick="handelClick(2)">2</button>
+                <button class="Button"  onclick="handelClick(3)">3</button>
+                <button class="Button2"  onclick="handelClick('+')">+</button>
             </div> 
-            <div>
+            <div  class="button-container">
                 <br>
-                <button class="Button">0</button>
-                <button class="Button">.</button>
+                <button class="Button" onclick="handelClick(0)">0</button>
+                <button class="Button"  onclick="handelClick('.')">.</button>
                 
                 &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
                 &nbsp; 
-                  <button class="Button3">=</button>
+                  <button class="Button3"  onclick="calculate()">=</button>
             </div>          
         </div>
-
+        
+    
 
     </body>
 </html>

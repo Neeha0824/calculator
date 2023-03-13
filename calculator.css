@@ -1,13 +1,25 @@
 .tablet{
-    height: 570px;
+    height: 600px;
     width: 300px;
-    background-color:;
+    
     margin-top: 110px;
     margin-left: 480px;
     border-radius: 3px 3px 3px 3px;
     box-shadow: 4px 4px 4px 4px rgb(207, 85, 85);
     border-radius: 20px;
 
+}
+.calculator-screen{
+    height: 23px;
+    width: 250px;
+    padding-top: 20px;
+    font-size: 32px;
+    margin-left: 22px;
+    color: black;
+    padding-bottom: 13px;
+    
+    background-image: linear-gradient(35deg,#C33764 ,#FF512F);
+    border-color: linear-gradient(35deg,#C33764 ,#FF512F);
 }
 
 
@@ -17,11 +29,12 @@
     background-color: white;
     border: white;
     margin-left: 10px;
-    border-radius: 3px 3px 3px 3px;
+    border-radius: 50%;
     font-size: 25px;
     font-weight: bold;
     margin-top: 2px;
     color: black;
+    cursor: pointer;
     
 }
 .Button2{
@@ -29,21 +42,34 @@
     width: 50px;
     margin-left: 10px;
     margin-top: 15px;
-    border: white;
+    border: black;
     border-radius: 3px 3px 3px 3px;
     font-size: 25px;
     font-weight: bold;
-    background-color:crimson;
+    background-color:crimson; 
+    background-image: linear-gradient(35deg,#C33764 ,#FF512F);
     color: black;
     border-radius: 45px;
-    filter: drop-shadow(0 0 0.75rem crimson);
+     filter: drop-shadow(0 0 0.75rem crimson); 
     
 }
+.Button:hover{
+    transform: scale(1.1);
+}
+.Button2:hover{
+    transform: scale(1.1);
+}
+.Button3:hover{
+    transform: scale(1.1);
+}
+
+
 .Button3{
+    
     border-radius: 45px;
     width: 80px;
     height: 45px;
-    border: pink solid 2px;
+    border: white solid 2px;
     background-image: linear-gradient(35deg,#C33764 ,#FF512F);
     font-size: 18px;
     font-weight: bold;
